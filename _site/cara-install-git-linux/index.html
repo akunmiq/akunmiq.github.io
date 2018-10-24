@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cara Menginstall Git di Linux - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Cara Menginstall Git di Linux" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/cara-install-git-linux/" property="og:url">
+  
+  
+    <meta content="2018-10-23T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/git.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Git" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Cara Menginstall Git di Linux">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/cara-install-git-linux/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/git.png">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/git.png alt="Cara Menginstall Git di Linux">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Cara Menginstall Git di Linux</h1>
+        <div class="page-date"><span>2018, Oct 23&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Kita sudah mengenal Git pada tulisan sebelumnya. Selanjutnya Kita akan melakukan instalasi dan persiapan untuk mulai belajar Git.</p>
+
+<p>Mari kita mulai…</p>
+
+<p>1.Cara Install Git di Linux</p>
+
+<p>Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install git
+</code></pre></div></div>
+
+<p>atau</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install git
+</code></pre></div></div>
+
+<p>Pada Fedora:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install git
+</code></pre></div></div>
+
+<p>Setelah itu, coba perika versi yang terinstal dengan perintah:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+</code></pre></div></div>
+
+<p>Pada komputer saya, versi yang terinstal adalah versi 2.7.4.</p>
+
+<p><img src="/assets/img/git-version.png" /></p>
+
+<p>2.Konfigurasi Awal yang Harus Dilakukan</p>
+
+<p>Ada beberapa konfigurasi yang harus dupersiapakan sebelum mulai menggunakan Git, seperti name dan email.</p>
+
+<p>Silahkan lakukan konfigurasi dengan perintah berikut ini.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "Petani Kode"
+git config --global user.email contoh@petanikode.com
+</code></pre></div></div>
+
+<p>Kemudian periksa konfigurasinya dengan perintah:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --list
+</code></pre></div></div>
+
+<p>Apabila berhasil tampil seperti gambar berikut ini, berarti konfigurasi berhasil.</p>
+
+<p><img src="/assets/img/git-config.png" /></p>
+
+<p>Itulah pembahasan mengenai cara menginstall git di linux yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai cara menginstall git di linux diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Cara Menginstall Git di Linux&url=http://localhost:4000/cara-install-git-linux/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/cara-install-git-linux/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/cara-install-git-linux/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Git" class="tag">&#35; Git</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
