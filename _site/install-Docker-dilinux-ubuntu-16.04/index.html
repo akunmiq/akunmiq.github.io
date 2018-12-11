@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Install Docker di Linux Ubuntu 16.04 - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Install Docker di Linux Ubuntu 16.04" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/install-Docker-dilinux-ubuntu-16.04/" property="og:url">
+  
+  
+    <meta content="2018-12-11T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/docker-back.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Docker" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Install Docker di Linux Ubuntu 16.04">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/install-Docker-dilinux-ubuntu-16.04/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/docker-back.png">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/docker-back.png alt="Install Docker di Linux Ubuntu 16.04">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Install Docker di Linux Ubuntu 16.04</h1>
+        <div class="page-date"><span>2018, Dec 11&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang install Docker di linux ubuntu 16.04. Sebelum masuk ke langkah-langkah bagaimana menginstallnya, mari kita ketahui terlebih dahulu apa itu Docker?</p>
+
+<p>Docker adalah aplikasi yang membuatnya sederhana dan mudah untuk menjalankan proses aplikasi dalam sebuah wadah, yang seperti mesin virtual, hanya lebih portabel, lebih ramah sumber daya, dan lebih bergantung pada sistem operasi host.</p>
+
+<p>Ada dua metode untuk menginstal Docker pada Ubuntu 16.04. Salah satu metode melibatkan menginstalnya pada instalasi sistem operasi yang ada. Yang lainnya melibatkan memintal server dengan alat bernama Docker Machine yang menginstal Docker secara otomatis di atasnya.</p>
+
+<p>Setelah mengetahui apa itu Docker, sekarang kita akan masuk ke langkah-langkah untuk menginstall Docker.</p>
+
+<h3 id="langkah-pertama">Langkah pertama</h3>
+<p>Langkah pertama adalah kita akan menginstall docker. Paket instalasi Docker yang tersedia di repository resmi Ubuntu 16.04 mungkin bukan versi terbaru. Untuk mendapatkan versi terbaru ini, install Docker dari repositori Docker resmi. Bagian ini menunjukkan kepada Anda bagaimana melakukan hal itu.</p>
+
+<p>Pertama, perbarui daftar paket Anda yang sudah ada:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+</code></pre></div></div>
+
+<p>Selanjutnya, instal beberapa paket prasyarat yang memungkinkan untuk menggunakan paket melalui HTTPS:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common
+</code></pre></div></div>
+
+<p>Kemudian tambahkan kunci GPG untuk repositori Docker resmi ke sistem Anda:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre></div></div>
+
+<p>Tambahkan repository Docker ke sumber APT:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository “deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable”
+</code></pre></div></div>
+
+<p>Selanjutnya update paket database dengan paket docker dari repo yang ditambahkan:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+</code></pre></div></div>
+
+<p>Pastikan Anda akan menginstal dari repo Docker bukan dari default Ubuntu 16.04 repo:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cache policy docker-ce
+</code></pre></div></div>
+
+<p>Jika berhasil maka akan keluar seperti ini:</p>
+
+<p><img src="/assets/img/docker1.png" /></p>
+
+<p>Selanjutnya install docker:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install -y docker -ce
+</code></pre></div></div>
+
+<p>Setelah itu bisa kita cek dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl status docker
+</code></pre></div></div>
+
+<p>Maka akan keluar seperti ini:</p>
+
+<p><img src="/assets/img/docker2.png" /></p>
+
+<h3 id="langkah-kedua">Langkah kedua</h3>
+<p>Langkah kedua adalah Bekerja Dengan Docker Image</p>
+
+<p>Kontainer Docker dibangun dari Docker image. Secara default, Docker menarik image-image ini dari Docker Hub, registri Docker yang dikelola oleh Docker, perusahaan di belakang proyek Docker. Siapa pun dapat menyimpan Docker image mereka di Docker Hub, sehingga sebagian besar aplikasi dan distribusi Linux yang Anda perlukan akan memiliki image yang dihosting di sana.</p>
+
+<p>Sebagai contoh kita ingin menggunakan ubuntu di dalam docker, maka kita tinggal mengetikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker pull ubuntu
+</code></pre></div></div>
+
+<p>Maka outputnya akan seperti ini:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Output
+Using default tag: latest
+latest: Pulling from library/ubuntu
+6b98dfc16071: Pull complete
+4001a1209541: Pull complete
+6319fc68c576: Pull complete
+b24603670dc3: Pull complete
+97f170c87c6f: Pull complete
+Digest: sha256:5f4bdc3467537cbbe563e80db2c3ec95d548a9145d64453b06939c4592d67b6d
+Status: Downloaded newer image for ubuntu:latest
+</code></pre></div></div>
+
+<p>Untuk melihat image yang telah diunduh ke komputer Anda, lalu ketikan:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker images
+</code></pre></div></div>
+
+<p>Jika ingin menggunakannya kita bisa menggunakan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker run ubuntu
+</code></pre></div></div>
+
+<p>Maka outputnya akan seperti ini:</p>
+
+<p><img src="/assets/img/docker3.png" /></p>
+
+<p>catatan: Angka dan huruf unik setelah root itu adalah ID Countainer.</p>
+
+<p>Sekarang kita bisa menggunakan ubuntu di countainer tersebut. Dan kita juga bisa menjalankan command2 yang ada pada ubuntu pada umumnya.</p>
+
+<p>Itulah pembahasan mengenai install Docker di linux ubuntu 16.04 yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai install Docker di linux ubuntu 16.04 diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Install Docker di Linux Ubuntu 16.04&url=http://localhost:4000/install-Docker-dilinux-ubuntu-16.04/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/install-Docker-dilinux-ubuntu-16.04/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/install-Docker-dilinux-ubuntu-16.04/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Docker" class="tag">&#35; Docker</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
