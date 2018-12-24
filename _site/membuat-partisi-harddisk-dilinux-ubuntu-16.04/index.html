@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Membuat Partisi Hard Disk di Linux Ubuntu 16.04 - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Membuat Partisi Hard Disk di Linux Ubuntu 16.04" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/membuat-partisi-harddisk-dilinux-ubuntu-16.04/" property="og:url">
+  
+  
+    <meta content="2018-12-24T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/partisi2.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="partisi" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Membuat Partisi Hard Disk di Linux Ubuntu 16.04">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/membuat-partisi-harddisk-dilinux-ubuntu-16.04/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/partisi2.jpg">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/partisi2.jpg alt="Membuat Partisi Hard Disk di Linux Ubuntu 16.04">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Membuat Partisi Hard Disk di Linux Ubuntu 16.04</h1>
+        <div class="page-date"><span>2018, Dec 24&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang membuat partisi hard disk di linux ubuntu 16.04. Karena ini berhubungan dengan hard disk, maka akan lebih baik jika kita menggunakan virtual box agar lebih aman. Untuk yang belum tau tentang virtual box bisa dilihat disini: https://miqdadhome.com/install-virtualbox-dilinux-ubuntu-16.04/</p>
+
+<p>Anda tentu tidak asing dengan istilah partisi maupun tabel partisi. Dua entitas inilah yang mendefinisikan ‘ruangan’ pada hard disk. Bagi Anda yang tergolong pengguna PC awam atau tidak terlalu paham mengenai partisi, suatu hard disk dapat dianalogikan seperti sebidang tanah kosong. Sebelum dapat dipakai, tanah tersebut harus dibagi dalam petak-petak kecil terlebih dahulu. Petak inilah yang diibaratkan seperti partisi. Adapun tabel partisi diandaikan papan keterangan di depan area tanah yang menjelaskan berapa petak yang di dalam area tanah dan berapa luas masing-masing petak. Di dalam petak ini nantinya “ditanami” data, yang dalam wujudnya sehari-hari dapat dilihat sebagai file.</p>
+
+<p>Sebelum dapat ditanami, petak-petak tersebut harus diolah terlebih dahulu. Proses pengolahan inilah yang dikenal sebagai proses format hard disk. Saat melakukan format, Anda dapat memilih berbagai format sistem file (file system). Apabila di Windows, tersedia format FAT atau NTFS. Di Linux, dikenal beberapa sistem file, diantaranya yang cukup populer adalah sistem file ext2,ext3 dan ext4.</p>
+
+<p>Sebelum mulai, kita setting virtual box kita agar bisa kita remote dari terminal laptop kita, ini akan lebih memudahkan kita daripada harus mengopersikan langsung di dalam virtual box.</p>
+
+<h3 id="langkah-pertama">Langkah pertama</h3>
+<p>Langkah pertama adalah kita akan mensetting virtual box agar bisa diremote dari terminal kita.</p>
+
+<p>A. Klik ‘setting’ lalu klik ‘Network’</p>
+
+<p><img src="/assets/img/part1.png" /></p>
+
+<p>B. Dibagian ‘Attached to’ rubah menjadi ‘Bridged Adapter’. Lalu klik ‘OK’</p>
+
+<p><img src="/assets/img/part2.png" /></p>
+
+<h3 id="langkah-kedua">Langkah kedua</h3>
+<p>Langkah kedua adalah kita akan menginstall openssh server.</p>
+
+<p>Untuk caranya bisa dilihat disini: https://sites.google.com/a/student.unsika.ac.id/anggayudap/linux/tutorial-install-dan-konfigurasi-ssh-pada-ubuntu-server</p>
+
+<h3 id="langkah-ketiga">Langkah ketiga</h3>
+<p>Langkah ketiga adalah kita akan membuat hard disk virtual baru.</p>
+
+<p>A. Klik ‘setting’ lalu klik ‘storage’. Lalu dibagian ‘Controller:SATA’ klik icon ‘add hard disk’ (paling kanan) dan pastikan terlebih dahulu bahwa virtual machine dalam keadaan power off. Lalu klik ‘Create new disk’.</p>
+
+<p><img src="/assets/img/part3.png" /></p>
+
+<p>B. Pilih ‘VDI(VirtualBox Disk Image)’ sebagai hard disk file type. Lalu klik tombol ‘next’.</p>
+
+<p><img src="/assets/img/part4.png" /></p>
+
+<p>C. Pilih ‘Dynamically allocated’. Lalu klik tombol ‘next’.</p>
+
+<p><img src="/assets/img/part5.png" /></p>
+
+<p>D. Pilih lokasi penyimpanan hard disk dan nama nya. Untuk ukuran hard disk kita buat 1 GB saja. Lalu klik tombol ‘create’.</p>
+
+<p><img src="/assets/img/part6.png" /></p>
+
+<p>E. Setelah membuat hard disk baru, kita bisa start virtual machine nya agar bisa kita remote.</p>
+
+<h3 id="langkah-keempat">Langkah keempat</h3>
+<p>Langkah keempat adalah kita remote virtual machine kita lalu kita masuk kelangkah-langkah untuk membuat partisi hard disk.</p>
+
+<p>A. Kita cek dahulu hard disk kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/part7.png" /></p>
+
+<p>B. Kita masuk ke fdisk dengan command</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo fdisk /dev/sdb
+</code></pre></div></div>
+
+<p>output nya akan seperti ini:</p>
+
+<p><img src="/assets/img/part8.png" /></p>
+
+<p>untuk melihat panduan bisa ketik m lalu enter, di situ akan keluar pilihan2 yang bisa kita gunakan.</p>
+
+<p>C. Kita akan membagi ‘sdb’ menjadi beberapa bagian</p>
+
+<p><img src="/assets/img/part9.png" /></p>
+
+<p>Dari gambar diatas akan kami jelaskan bagian-bagiannya sebagai berikut:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command (m for help): n { n = membuat pastisi baru}
+
+Partition type
+
+	p   primary (0 primary, 0 extended, 4 free)
+	e   extended (container for logical partitions)
+
+Select (default p): p 	{ kita pilih primary }
+
+Partition number (1-4, default 1):  { plih default saja=langsung tekan enter}
+
+First sector (2048-2116509, default 2048):  { pilih default }
+
+Last sector, +sectors or +size{K,M,G,T,P} (2048-2116509, default 2116509): +200M  { ukuran partisi yang kita inginkan}
+
+Created a new partition 1 of type 'Linux' and of size 200 MiB.
+
+Command (m for help): 
+</code></pre></div></div>
+
+<p>D. Kita akan mengecek apakah sudah berhasil atau belum, dengan command ‘p’(print):</p>
+
+<p>Sebelum dibuat partisi</p>
+
+<p><img src="/assets/img/part10.png" /></p>
+
+<p>Setelah dibuat partisi</p>
+
+<p><img src="/assets/img/part11.png" /></p>
+
+<p>Jika kita ingin menyimpan partisi tersebut bisa tulis command ‘w’ lalu enter. Dan jika ingin keluar bisa tulis command ‘quit’.</p>
+
+<p>E.Kita cek lagi hard disk kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/part12.png" /></p>
+
+<p>Disitu terlihat dibagian ‘sdb’ ada ‘sdb1’ itu berarti partisi kita tadi telah berhasil. Dan jika anda ingin membuat partisi lagi silahkan lakukan hal yang sama seperti diatas.</p>
+
+<p>Itulah pembahasan mengenai membuat partisi hard disk di linux ubuntu 16.04 yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai membuat partisi hard disk di linux ubuntu 16.04 diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Membuat Partisi Hard Disk di Linux Ubuntu 16.04&url=http://localhost:4000/membuat-partisi-harddisk-dilinux-ubuntu-16.04/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/membuat-partisi-harddisk-dilinux-ubuntu-16.04/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/membuat-partisi-harddisk-dilinux-ubuntu-16.04/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#partisi" class="tag">&#35; partisi</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
