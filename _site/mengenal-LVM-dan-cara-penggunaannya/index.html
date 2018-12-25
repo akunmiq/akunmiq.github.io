@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/mengenal-LVM-dan-cara-penggunaannya/" property="og:url">
+  
+  
+    <meta content="2018-12-11T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/lvm-back.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="LVM" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/mengenal-LVM-dan-cara-penggunaannya/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/lvm-back.png">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/lvm-back.png alt="Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya</h1>
+        <div class="page-date"><span>2018, Dec 11&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang mengenal LVM (Logical Volume Manager) dan cara penggunaannya. Sebelum masuk ke langkah-langkah bagaimana menggunakannya, mari kita ketahui terlebih dahulu apa itu LVM (Logical Volume Manager)?</p>
+
+<p>LVM adalah sebuah manajemen penyimpan di sistem operasi GNU/Linux yang menyediakan fleksibilitas dalam membuat dan mengubah partisi dalam sebuah disk. LVM menambahkan lapisan antara antarmuka I/O kernel dengan perangkat fisik untuk mendapatkan logical-view dari penyimpan. Dengan adanya lapisan inilah kita dapat melakukan perubahan partisi baik itu resize, penghapusan, dan lain - lain secara live pada sistem baik untuk satu atau lebih media. 
+Kemudahan tersebut akan membuat administrator maupun pengguna lebih nyaman dalam melakukan manajemen dan alokasi ruang penyimpan hingga penamaan volume. Selain itu kita dapat melakukan snapshot dan membuat block-device salinan sebuah partisi atau lebih untuk mencatat statusnya dengan tujuan backup</p>
+
+<p>Beberapa istilah yang dikenal di dunia LVM yaitu :</p>
+
+<p>A. Physical Volume (PV)
+adalah physical disk atau media penyimpan secara fisik baik itu berupa partisi secara konvensional misal: hda1, hda3, hdc5,sda3 maupun RAID..</p>
+
+<p>B. Volume Group (VG)
+adalah sebuah volume yang dibuat dari satu atau lebih PV dalam media penyimpan dan juga sebagai manajer bagi PV dan LV.</p>
+
+<p>C. Logical Volume (LV)
+adalah partisi secara logical yang dibuat di atas VG dan pada LV inilah filesystem akan diletakkan.</p>
+
+<p>D. Physical Extents (PE)
+adalah bagian-bagian atau potongan yang membentuk sebuah PV, dengan PE ini dapat ditentukan maksimal ukuransebuah VG.</p>
+
+<p>E. Logical Extents (LE)
+adalah bagian atau potongan yang membentuk LV,ukurannya sama dengan PE.</p>
+
+<p>Setelah mengetahui apa itu LVM (Logical Volume Manager), sekarang kita akan masuk ke langkah-langkah untuk menggunakan LVM.</p>
+
+<h3 id="langkah-pertama">Langkah pertama</h3>
+<p>Langkah pertama adalah kita akan menginstall LVM (Logical Volume Manager), dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install lvm2
+</code></pre></div></div>
+
+<h3 id="langkah-kedua">Langkah kedua</h3>
+<p>Langkah kedua adalah Kita cek dahulu hard disk kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm2.png" /></p>
+
+<p>Disini kita harus mempunyai 2 partisi terlebih dahulu, dan dari gambar diatas bisa kita lihat ada sdb1 dan sdb2. Untuk yang belum tau cara buat partisi bisa lihat link disini: https://miqdadhome.com/membuat-partisi-harddisk-dilinux-ubuntu-16.04/</p>
+
+<h3 id="langkah-ketiga">Langkah ketiga</h3>
+<p>Langkah ketiga adalah kita harus merubah type partisi menjadi ‘Linux LVM’. Type partisi itu sangatlah banyak dan kita bisa melihat listnya dengan mengetikan huruf ‘l’. Dan untuk ‘Linux LVM’ berada di nomer 30.</p>
+
+<p><img src="/assets/img/lvm3.png" /></p>
+
+<p>Untuk cara merubah type partisi bisa mengetikkan huruf ‘t’.</p>
+
+<p><img src="/assets/img/lvm4.png" /></p>
+
+<p>Jika sudah selesai ketikkan huruf ‘w’ untuk menyimpannya.</p>
+
+<h3 id="langkah-keempat">Langkah keempat</h3>
+<p>Langkah keempat adalah kita akan mebuat Physical Volume, langkah ini akan mendefinisikan partisi mana yang akan kita pakai untuk Logical Volume nantinya. Caranya dengan ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pvcreate /dev/sdb1 /dev/sdb2
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm5.png" /></p>
+
+<h3 id="langkah-kelima">Langkah kelima</h3>
+<p>Langkah kelima adalah kita akan membuat Volume Group, caranya dengan ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vgcreate datagabungan /dev/sdb1 /dev/sdb2
+</code></pre></div></div>
+
+<p>Kata ‘datagabungan’ itu cuma nama, bisa diisi sesuai keinginan kita.</p>
+
+<p><img src="/assets/img/lvm6.png" /></p>
+
+<h3 id="langkah-keenam">Langkah keenam</h3>
+<p>Langkah keenam adalah kita akan membuat Logical Volume, caranya dengan ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lvcreate --name logical-data --size 490M datagabungan
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>logical-data : nama untuk Logical Volume, bisa diisi sesuai keinginan kita.</p>
+  </li>
+  <li>
+    <p>490M : ukuran untuk gabungan partisi kita.</p>
+  </li>
+  <li>
+    <p>datagabungan: nama pada saat kita membuat Volume Group, nama ini harus sama.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/lvm7.png" /></p>
+
+<p>Lalu coba kita cek dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lvdisplay
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm8.png" /></p>
+
+<h3 id="langkah-ketujuh">Langkah ketujuh</h3>
+<p>Langkah ketujuh adalah kita akan mengubah File System Logical Volume tadi menjadi ext4 dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs -t ext4 /dev/datagabungan/logical-data
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm9.png" /></p>
+
+<h3 id="langkah-kedelapan">Langkah kedelapan</h3>
+<p>Langkah kedelapan adalah lakukan beberapa command dibawah ini.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /mnt
+
+ls -la
+
+mkdir datakecil
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm10.png" /></p>
+
+<h3 id="langkah-kesembilan">Langkah kesembilan</h3>
+<p>Langkah kesembilan adalah kita akan mount Logical Volume yang kita buat tadi ke datakecil.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount /dev/datagabungan/logical-data /mnt/datakecil
+</code></pre></div></div>
+
+<p>Lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm11.png" /></p>
+
+<h3 id="langkah-kesepuluh">Langkah kesepuluh</h3>
+<p>Langkah kesepuluh adalah kita akan menambahkan partisi baru ke Logical Volume yang barusan kita buat, agar Logical Volume kita punya size yang lebih besar. Caranya adalah sebagai berikut:</p>
+
+<p>A. Buat partisi baru sisa ukuran dari sdb. Caranya seperti kita membuat partisi pada biasanya.</p>
+
+<p><img src="/assets/img/lvm12.png" /></p>
+
+<p>B. Rubah type partisi dengan command ‘t’.</p>
+
+<p><img src="/assets/img/lvm13.png" /></p>
+
+<p>Lalu ketikkan command ‘w’ untuk menyimpan, dan disitu muncul perintah untuk mereboot virtualboxnya.</p>
+
+<p>C. Setelah direboot, lalu kita cek kembali dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm14.png" /></p>
+
+<h3 id="langkah-kesebelas">Langkah kesebelas</h3>
+<p>Langkah kesebelas adalah kita akan mebuat Physical Volume dari sdb3, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pvcreate /dev/sdb3 
+</code></pre></div></div>
+
+<p>lalu kita cek dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pvs
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm15.png" /></p>
+
+<h3 id="langkah-kedua-belas">Langkah kedua belas</h3>
+<p>Langkah kedua belas adalah kita akan mengextend Volume Group. Disini kita akan menambahkan sdb3 kedalam file datagabungan, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vgextend datagabungan /dev/sdb3
+</code></pre></div></div>
+
+<p>lalu kita cek dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vgs
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm16.png" /></p>
+
+<p>lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vgdisplay
+</code></pre></div></div>
+
+<h3 id="langkah-ketiga-belas">Langkah ketiga belas</h3>
+<p>Langkah ketiga belas adalah kita akan mengextend Logical Volume, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lvextend -l +130 /dev/datagabungan/logical-data
+</code></pre></div></div>
+
+<p>Angka ‘+130’ ini adalah jumlah Free PE, jumlah ini bisa kita lihat dengan mengetikkan command ‘vgdisplay’. Jadi jumlah ini disesuaikan dengan milik masing2.</p>
+
+<p><img src="/assets/img/lvm17.png" /></p>
+
+<p>lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>e2fsck -f /dev/datagabungan/logical-data
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm18.png" /></p>
+
+<p>lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resize2fs /dev/datagabungan/logical-data
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm19.png" /></p>
+
+<h3 id="langkah-keempat-belas">Langkah keempat belas</h3>
+<p>Langkah keempat belas adalah kita akan mengemount, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount /dev/datagabungan/logical-data /mnt/datakecil
+</code></pre></div></div>
+
+<p>lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+</code></pre></div></div>
+
+<p><img src="/assets/img/lvm20.png" /></p>
+
+<p>Jika berhasil maka akan terlihat ukuran sizenya akan bertambah.</p>
+
+<p>Itulah pembahasan mengenai mengenal LVM (Logical Volume Manager) dan cara penggunaannya yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai mengenal LVM (Logical Volume Manager) dan cara penggunaannya diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya&url=http://localhost:4000/mengenal-LVM-dan-cara-penggunaannya/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/mengenal-LVM-dan-cara-penggunaannya/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/mengenal-LVM-dan-cara-penggunaannya/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#LVM" class="tag">&#35; LVM</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
