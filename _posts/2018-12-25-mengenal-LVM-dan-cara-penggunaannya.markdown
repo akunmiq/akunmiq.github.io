@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Mengenal LVM (Logical Volume Manager) dan Cara Penggunaannya
-date: 2018-12-11
+date: 2018-12-25
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: lvm-back.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
@@ -111,7 +111,7 @@ Langkah kedelapan adalah lakukan beberapa command dibawah ini.
 <img src="/assets/img/lvm10.png">
 
 ### Langkah kesembilan
-Langkah kesembilan adalah kita akan mount Logical Volume yang kita buat tadi ke datakecil.
+Langkah kesembilan adalah kita akan mount Logical Volume yang kita buat tadi ke datakecil, dengan command:
 
 	mount /dev/datagabungan/logical-data /mnt/datakecil
 

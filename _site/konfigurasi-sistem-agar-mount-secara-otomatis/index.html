@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Konfigurasi Sistem Agar Mount Secara Otomatis - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Konfigurasi Sistem Agar Mount Secara Otomatis" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/konfigurasi-sistem-agar-mount-secara-otomatis/" property="og:url">
+  
+  
+    <meta content="2018-12-26T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/mount-back.jpeg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="mount" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Konfigurasi Sistem Agar Mount Secara Otomatis">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/konfigurasi-sistem-agar-mount-secara-otomatis/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/mount-back.jpeg">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/mount-back.jpeg alt="Konfigurasi Sistem Agar Mount Secara Otomatis">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Konfigurasi Sistem Agar Mount Secara Otomatis</h1>
+        <div class="page-date"><span>2018, Dec 26&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang konfigurasi sistem agar mount secara otomatis. Perlu diketahui, didalam linux tidak semua device langsung ter-mount oleh system secara otomatis setelah kita menyalakan komputer kita. Ada beberapa yang harus kita mount secara manual agar bisa kita gunakan. Berbeda dengan Windows, yang semua sudah serba nge-mount secara otomatis sehingga kita tinggal pakai saja.</p>
+
+<p>Sekarang kita akan coba konfigurasi sistem agar melakukan mount secara otomatis terhadap partisi kita, agar setiap kita menyalakan atau me-reboot komputer kita partisi kita bisa langsung di pakai.</p>
+
+<p>Langsung saja kita akan masuk ke langkah-langkah untuk konfigurasi sistem agar mount secara otomatis.</p>
+
+<h3 id="langkah-pertama">Langkah pertama</h3>
+<p>Langkah pertama adalah kita cek dahulu hard disk kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount1.png" /></p>
+
+<h3 id="langkah-kedua">Langkah kedua</h3>
+<p>Langkah kedua adalah akan mengubah File System ‘sdb1’ menjadi ext4 dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs -t ext4 /dev/sdb1
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount2.png" /></p>
+
+<h3 id="langkah-ketiga">Langkah ketiga</h3>
+<p>Langkah ketiga adalah lakukan beberapa command dibawah ini.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /mnt
+
+ls -la
+
+mkdir mountbaru
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount3.png" /></p>
+
+<h3 id="langkah-keempat">Langkah keempat</h3>
+<p>Langkah keempat adalah kita akan mount ‘sdb1’ ke mountbaru, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount /dev/sdb1 /mnt/mountbaru
+</code></pre></div></div>
+
+<p>lalu ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount4.png" /></p>
+
+<p>Di sini kita mempunyai sebuah partisi yaitu sdb1 yang kita mount ke /mnt/mountbaru.</p>
+
+<h3 id="langkah-kelima">Langkah kelima</h3>
+<p>Langkah kelima adalah kita akan melihat UUID, type file system, dan lain2 dari semua device milik kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blkid
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount5.png" /></p>
+
+<p>Lalu kita copy UUID dari ‘sdb1’ yaitu /dev/sdb1: UUID=”f6b152ec-3f95-45a1-811e-4180b17c58d8”</p>
+
+<h3 id="langkah-keenam">Langkah keenam</h3>
+<p>Langkah kenam adalah setelah kita tadi meng-copy UUID dari ‘sdb1’, sekarang kita akan masuk ke /etc/fstab, dengan commmand:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/fstab
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount6.png" /></p>
+
+<p>lalu paste UUID dibaris paling bawah, seperti ini</p>
+
+<p><img src="/assets/img/mount7.png" /></p>
+
+<ul>
+  <li>
+    <p>UUID=”f6b152ec-3f95-45a1-811e-4180b17c58d8” : UUID milik ‘sdb1’ yang telah dicopy.</p>
+  </li>
+  <li>
+    <p>/mnt/mountbaru : Tempat dimana ‘sdb1’ kita mount.</p>
+  </li>
+  <li>
+    <p>ext4 : Type file system dari ‘sdb1’.</p>
+  </li>
+  <li>
+    <p>Angka 0 : Sudah aturan dari sananya begitu.</p>
+  </li>
+  <li>
+    <p>Angka 2 : Nomer untuk menandakan kapan parisi tersebut diproses, tinggal lanjutin nomer yang sudah ada.</p>
+  </li>
+</ul>
+
+<p>Lalu kita simpan dengan menekan ‘ctrl + x’ lalu tekan ‘Y’ dan terakhir ‘enter’.</p>
+
+<h3 id="langkah-ketujuh">Langkah ketujuh</h3>
+<p>Langkah ketujuh adalah kita akan mereboot virtual box kita, dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reboot
+</code></pre></div></div>
+
+<p>Jika telah selesai reboot nya lalu kita ketikkan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<p><img src="/assets/img/mount8.png" /></p>
+
+<p>Jika outputnya seperti gambar diatas berarti kita telah berhasil.</p>
+
+<p>Itulah pembahasan mengenai konfigurasi sistem agar mount secara otomatis yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai konfigurasi sistem agar mount secara otomatis diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Konfigurasi Sistem Agar Mount Secara Otomatis&url=http://localhost:4000/konfigurasi-sistem-agar-mount-secara-otomatis/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/konfigurasi-sistem-agar-mount-secara-otomatis/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/konfigurasi-sistem-agar-mount-secara-otomatis/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#mount" class="tag">&#35; mount</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
