@@ -1,0 +1,88 @@
+---
+layout: post 
+title: Encrypted Partition
+date: 2018-12-31
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+img: encrypt4.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [encryption, Linux]
+---
+
+Dalam artikel kita akan membahas tentang encrypted partition. Sebelum masuk ke langkah-langkah bagaimana penggunaannya, mari kita ketahui terlebih dahulu apa itu encrypted partition?
+
+Encrypt adalah proses mengamankan suatu informasi dengan membuat informasi tersebut tidak dapat dibaca tanpa bantuan pengetahuan khusus. Dikarenakan enkripsi telah digunakan untuk mengamankan komunikasi di berbagai negara, hanya organisasi-organisasi tertentu dan individu yang memiliki kepentingan yang sangat mendesak akan kerahasiaan yang menggunakan enkripsi. Di pertengahan tahun 1970-an, enkripsi kuat dimanfaatkan untuk pengamanan oleh sekretariat agen pemerintah Amerika Serikat pada domain publik, dan saat ini enkripsi telah digunakan pada sistem secara luas, seperti Internet e-commerce, jaringan Telepon bergerak dan ATM pada bank.
+
+Setelah mengetahui apa itu encrypted partition, sekarang kita akan masuk ke langkah-langkah untuk penggunaan encrypted partition.
+
+### Langkah pertama
+Langkah pertama adalah Kita cek dulu, apakah komputer kita support enkripsi file sistem atau tidak, dengan command:
+
+	sudo grep -i config_dm_crypt /boot/config-$(uname -r)
+
+<img src="/assets/img/encrypt.png">
+
+Lalu cek module
+
+	sudo lsmod | grep dm_crypt
+
+Jika tidak muncul apa2 maka kita harus menginstall Encrypt terlebih dahulu.
+
+### Langkah kedua
+Langkah kedua adalah kita akan menginstall Encrypt, dengan command:
+
+	sudo apt-get install cryptsetup
+
+### Langkah ketiga
+Langkah ketiga adalah kita akan membuat Encrypt, dengan command: 
+
+	sudo cryptsetup -y luksFormat /dev/sdb1
+
+<img src="/assets/img/encrypt2.png">
+
+Saya disini menggunakan pertisi sdb1 untuk di encrypt.Setelah itu kalian tulis "YES".
+Lalu masukkan password anda,akan tetapi perlu diingat sistem tidak akan menerima password yang simple atau lemah.
+
+### Langkah keempat
+Langkah keempat adalah kita akan membuka Encrypt, dengan command:
+
+	sudo cryptsetup luksOpen /dev/sdb1 secret
+
+'secret' cuma sekedar nama, bisa kita isi teerserah kita. Lalu masukkan password yang kalian buat tadi.
+
+### Langkah kelima
+Langkah kelima adalah kita akan mengecek Encrypt, dengan command:
+
+	lsblk
+
+<img src="/assets/img/encrypt3.png">
+
+maka akan terlihat berbeda dari sebelumnya.
+
+### Langkah keenam
+Langkah kenam adalah kita akan mengubah file system, dengan commmand:
+
+	sudo mkfs -t ext4 /dev/mapper/secret
+
+### Langkah ketujuh
+Langkah ketujuh adalah kita akan mount Encrypt partisi, dengan command:
+
+	sudo mount /dev/sdb1 /mnt/teeny
+
+lalu kita cek lagi dengan command:
+
+	lsblk
+
+	df -h
+
+### Langkah kedelapan
+Langkah kedelapan adalah jika kita sudah selesai menggunakan partisi 'sdb1', maka kita harus menguncinya lagi, dengan cara:
+
+	sudo umnount /mnt/teeny
+
+lalu ketikkan command dibawah ini:
+
+	cryptsetup luksClose /dev/sdb1 secret
+
+dan 'sdb1' sudah dikunci lagi.
+
+Itulah pembahasan mengenai encrypted partition yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai encrypted partition diatas mudah dipahami.
