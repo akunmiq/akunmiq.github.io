@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mengenal RAID dan Beberapa Tingkatannya. - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Mengenal RAID dan Beberapa Tingkatannya." property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/mengenal-raid-dan-beberapa-tingkatannya/" property="og:url">
+  
+  
+    <meta content="2019-01-02T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/raid.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="RAID" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Mengenal RAID dan Beberapa Tingkatannya.">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/mengenal-raid-dan-beberapa-tingkatannya/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/raid.jpg">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2019 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/raid.jpg alt="Mengenal RAID dan Beberapa Tingkatannya.">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Mengenal RAID dan Beberapa Tingkatannya.</h1>
+        <div class="page-date"><span>2019, Jan 02&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang mengenal RAID dan beberapa tingkatannya. Sebelum masuk ke langkah-langkah bagaimana penggunaannya, mari kita ketahui terlebih dahulu apa itu RAID?</p>
+
+<p>RAID, singkatan dari Redundant Array of Independent Disks merujuk kepada sebuah teknologi di dalam penyimpanan data komputer yang digunakan untuk mengimplementasikan fitur toleransi kesalahan pada media penyimpanan komputer (utamanya adalah hard disk) dengan menggunakan cara redundansi (penumpukan) data, baik itu dengan menggunakan software, maupun unit perangkat keras RAID terpisah. RAID didesain untuk meningkatkan keandalan data dan/atau meningkatkan kinerja I/O dari hard disk. kali ini GemarOprek akan mengupas tuntas Mengenal Raid dan beberapa tingkatannya</p>
+
+<p>Sejak pertama kali diperkenalkan, RAID dibagi ke dalam beberapa skema, yang disebut dengan “RAID Level” (tingkatan). Pada awalnya, ada lima buah RAID level yang pertama kali dikonsepkan, tetapi seiring dengan waktu, level-level tersebut berevolusi, yakni dengan menggabungkan beberapa level yang berbeda dan juga mengimplementasikan beberapa level proprietary yang tidak menjadi standar RAID.</p>
+
+<p>Ada dua sistem perangkaian utama dalam RAID, yaitu stripping (penyalinan data ke lebih dari satu buah hard disk) dan mirroring (pemecahan data ke beberapa hard disk). Sistem stripping efektif untuk meningkatkan kecepatan akses data dan tulis data, sementara itu sistem mirroring cocok untuk backup data.</p>
+
+<p>Setelah mengetahui apa itu RAID, sekarang kita akan masuk ke langkah-langkah untuk mengenal RAID dan beberapa tingkatannya.</p>
+
+<h2 id="tipe-tipe-raid">Tipe-tipe RAID</h2>
+
+<h3 id="software-raid">Software RAID</h3>
+<p>Semua konfigurasi ditangani oleh sistem operasi/software. Keuntungan dari RAID software yang sangat murah, karena tidak perlu membeli perangkat keras tambahan untuk mengelola RAID. Tetapi karena tidak dikelola oleh hardware sendiri, maka kelemahannya adalah dia butuh sumber daya memori dan daya CPU tambahan dari komputer.</p>
+
+<h3 id="hardware-raid">Hardware RAID</h3>
+<p>Semua informasi tentang konfigurasi RAID disimpan dalam interface card dalam bentuk perangkat keras. Keuntungannya adalah meningkatkan kinerja. Karena semuanya ditangani oleh interface card, sehingga komputer tidak tidak perlu menggunakan memori atau daya CPU untuk menjalankan RAID.</p>
+
+<p>Dulu sekali, <strong>Hardware RAID</strong> bisa dikatakan jadi primadona. Namun seiring berkembangnya waktu,  multi-core CPU dan memori sudah bisa didapatkan dengan harga yang semakin terjangkau dan semakin mumpuni kualitasnya. Maka dengan CPU yang lebih cepat, <strong>Software RAID</strong> pun sekarang bisa melakukan kinerja sebaik Hardware RAID dan bahkan bisa lebih cepat dalam beberapa kasus.</p>
+
+<h2 id="beberapa-tingkatan-dalam-raid">Beberapa Tingkatan dalam RAID</h2>
+
+<h3 id="raid-0">RAID 0</h3>
+<p>Dengan RAID 0, kita menggunakan dua / lebih hard disk yang bertindak seolah-olah mereka satu hard disk. Raid 0 diibaratkan memiliki  “0″ perlindungan. Bahkan karena kita menggunakan dua hard disk maka kita memiliki dua kali risiko kehilangan data. Karena bila salah satu drive mengalami error, maka kita terancam kehilangan data.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>RAID 0 menggunakan ruang hard disk secara maksimal karena tidak ada redundasi data.</li>
+  <li>RAID 0 punya kecepatan yang lebih karena lebih banyak ruang dari dua hard disk yang dijadikan satu.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<ul>
+  <li>Tidak ada perlindungan. Jadi jika kita kehilangan satu hard disk tunggal, data kita akan hilang.</li>
+  <li>Karena kita menggunakan dua hard drive tanpa redundansi, maka resiko kita jadi dua kali lipat. Makanya akan lebih aman untuk menyimpan data dalam hard disk tunggal, misalnya bila kita menyimpan file 10MB dimana masing-masing drive menerima 5MB, maka jika salah satu drive rusak, kita hanya kehilangan data 5MB.</li>
+</ul>
+
+<p><img src="/assets/img/raid0.png" /></p>
+
+<h3 id="raid-1">RAID 1</h3>
+<p>Dalam RAID 1 terjadi mirrorring antar hard disk. Sehingga dia menyediakan redundansi jika  salah satu disk mengalami error. Tidak seperti RAID 0 di mana semua space digabungkan, RAID 1 hanya menggunakan setengah ruang karena drive kedua digunakan untuk redundansi. Dengan syarat kedua hard drive ukurannya harus sama.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Redundansi dan Kecepatan.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<p>-Space hard disk tidak digunakan secara efisien. Karena kedua hard disk adalah salinan satu sama lain, hanya setengah dari ukuran jumlah gabungan yang digunakan.</p>
+
+<p><img src="/assets/img/raid1.png" /></p>
+
+<h3 id="raid-2">RAID 2</h3>
+<p>RAID 2, juga menggunakan sistem stripping. Namun ditambahkan tiga harddisk lagi untuk pariti hamming, sehingga data menjadi lebihreliable. Karena itu, jumlah harddisk yang dibutuhkan adalah minimal 5 (n+3, n &gt; 1). Ketiga harddisk terakhir digunakan untuk menyimpan hamming code dari hasil perhitungan tiap bit-bit yang ada di harddisk lainnya. <strong>Contoh:</strong></p>
+
+<p>Kita memiliki 5 harddisk (sebut saja harddisk A,B,C, D, dan E) dengan ukuran yang sama, masing-masing 40GB. Jika kita mengkonfigurasi keempat harddisk tersebut dengan RAID 2, maka kapasitas yang didapat adalah: 2 x 40GB = 80GB (dari harddisk A dan B). Sedangkan harddisk C, D, dan E tidak digunakan untuk penyimpanan data, melainkan hanya untuk menyimpan informasi pariti hamming dari dua harddisk lainnya: A, dan B. Ketika terjadi kerusakan fisik pada salah satu harddisk utama (A atau B), maka data tetap dapat dibaca dengan memperhitungkan pariti kode hamming yang ada di harddisk C, D, dan E.</p>
+
+<p><img src="/assets/img/raid2.png" /></p>
+
+<h3 id="raid-3">RAID 3</h3>
+<p>RAID 3, juga menggunakan sistem stripping. Juga menggunakan harddisk tambahan untuk reliability, namun hanya ditambahkan sebuah harddisk lagi untuk parity.. Karena itu, jumlah harddisk yang dibutuhkan adalah minimal 3 (n+1 ; n &gt; 1). Harddisk terakhir digunakan untuk menyimpan parity dari hasil perhitungan tiap bit-bit yang ada di harddisk lainnya. <strong>Contoh kasus:</strong></p>
+
+<p>Kita memiliki 4 harddisk (sebut saja harddisk A,B,C, dan D) dengan ukuran yang sama, masing-masing 40GB. Jika kita mengkonfigurasi keempat harddisk tersebut dengan RAID 3, maka kapasitas yang didapat adalah: 3 x 40GB = 120GB. Sedangkan harddisk D tidak digunakan untuk penyimpanan data, melainkan hanya untuk menyimpan informasi parity dari ketiga harddisk lainnya: A, B, dan C. Ketika terjadi kerusakan fisik pada salah satu harddisk utama (A, B, atau C), maka data tetap dapat dibaca dengan memperhitungkan parity yang ada di harddisk D. Namun, jika harddisk D yang mengalami kerusakan, maka data tetap dapat dibaca dari ketiga harddisk lainnya.</p>
+
+<p><img src="/assets/img/raid3.png" /></p>
+
+<h3 id="raid-4">RAID 4</h3>
+<p>Sama dengan sistem RAID 3, namun menggunakan parity dari tiap block harddisk, bukan bit. Kebutuhan harddisk minimalnya juga sama, 3 (n+1 ; n &gt;1).</p>
+
+<p><img src="/assets/img/raid4.png" /></p>
+
+<h3 id="raid-5-disk-striping-with-distributed-parity">Raid 5 (Disk Striping with Distributed Parity)</h3>
+<p>RAID 5 adalah tingkat atau level yang paling populer digunakan di server saat ini. Dengan RAID 5 kita bisa memiliki performa dan efisiensi penggunaan ruang. Dalam RAID 5 redundansi didistribusikan di antara semua drive. Jumlah minimum dari drive yang dapat digunakan pada RAID 5 adalah tiga.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Efisiensi penggunaan kombinasi harddisk.</li>
+  <li>Toleransi kesalahan: Jika  salah satu hard disk down/error  maka data tetap aman.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<ul>
+  <li>Kecepatan RAID 5 tidak secepat RAID 0 atau 1.</li>
+  <li>Jika lebih dari satu hard disk mengalami error, maka data terancam hilang.</li>
+</ul>
+
+<p><img src="/assets/img/raid5.png" /></p>
+
+<h3 id="raid-6-disk-striping-with-dual-parity">Raid 6 (Disk Striping with Dual Parity)</h3>
+<p>RAID 6 pada dasarnya sama dengan RAID 5, dengan perbedaan dua drive bisa down pada saat yang sama bukan hanya satu. Jumlah minimum dari drive yang dapat digunakan dengan RAID 6 adalah empat.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Meskipun dua hard disk down bersamaan, data kita tetap aman.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<ul>
+  <li>Space total hard drive sangat berkurang karena lebih banyak dialokasikan untuk partisi redundansi.</li>
+  <li>Kecepatan RAID 6 tidak secepat RAID 0 atau 1.</li>
+  <li>Proses rebuilt lebih lambat. Ketika drive down, maka perlu rebuilt kembali. Kinerja akan menurun jauh bila dibandingkan dengan metode RAID lainnya.</li>
+</ul>
+
+<p><img src="/assets/img/raid6.png" /></p>
+
+<h3 id="raid-z">Raid Z</h3>
+<p>Raid Z dan RAID Z2 adalah penemuan Sun Micro System. RAID Z memiliki semua manfaat dari RAID 5 dan fitur lainnya yang membuatnya jauh lebih unggul. Seperti dengan RAID 5, RAID Z dapat mendukung sejumlah hard disk yang bekerja sama dan satu disk untuk redudansi. Jumlah minimum dari hard disk adalah tiga dan hanya satu yang bisa down pada suatu waktu. Jika lebih dari satu hard disk rusak pada saat yang sama, maka kita beresiko kehilangan data.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Memiliki semua kelebihan dari RAID 5 dan fitur lainnya.</li>
+</ul>
+
+<p><strong>Kelemahan:</strong></p>
+
+<ul>
+  <li>Hanya dapat digunakan dengan OS berbasis Open Solaris seperti Nexenta dan atau sistem berbasis BSD seperti FreeBSD.</li>
+</ul>
+
+<p><img src="/assets/img/raidz.png" /></p>
+
+<h3 id="raid-z2">Raid Z2</h3>
+<p>Raid Z2 hampir identik dengan Raid Z dan mirip dengan RAID 6. Dalam RAID Z2, meski dua hard disk bisa down di waktu bersamaan namun data akan tetap aman dan mudah diakses. Sama seperti RAID Z, RAID Z2 jauh lebih unggul dengan RAID 6 karena di dalamnya terdapat banyak fitur lainnya. Jumlah minimum drive untuk menggunakan RAID Z2 adalah empat.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Data lebih aman meski dua drive bisa down pada saat yang sama bukan hanya satu.</li>
+  <li>Memiliki semua manfaat dari RAID Z.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<ul>
+  <li>Dua hard disk digunakan untuk paritas, sehingga ukuran jumlah gabungan space sangat terbatas.</li>
+  <li>Hanya dapat digunakan dengan OS berbasis Open Solaris seperti Nexenta dan atau sistem berbasis BSD seperti FreeBSD.</li>
+</ul>
+
+<p><img src="/assets/img/raidz2.png" /></p>
+
+<h3 id="raid-10">Raid 10</h3>
+<p>RAID 10 adalah gabungan dari  RAID 1 + RAID 0. Makanya dia bisa memberikan optimasi untuk toleransi kesalahan. Dimana RAID 0 memiliki kecepatan yang lebih karena lebih banyak ruang dari dua hard disk yang dijadikan satu, sedangkan RAID 1 memberikan mirroring disk untuk redundansi. Dalam beberapa kasus, RAID 10 menawarkan data yang lebih cepat membaca dan menulis daripada RAID 5 karena tidak perlu mengelola paritas. Minimum harddisk yang bisa digunakan adalah 4 hard disk.</p>
+
+<p><strong>Kelebihan:</strong></p>
+
+<ul>
+  <li>Memiliki manfaat dari kecepatan dari RAID 0 dan Mirroring dari Raid 1.</li>
+  <li>Tingkat keamanan terhadap kemungkinan hilangnya data yang lebih baik dari penggunaan sebuah harddisk.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+
+<ul>
+  <li>Memiliki segala kekurangan yang dimiliki RAID 1 dan RAID 0.</li>
+  <li>Kegagalan disk memiliki efek pada throughput, meskipun hal ini masih dapat ditoleransi.</li>
+</ul>
+
+<p><img src="/assets/img/raid10.png" /></p>
+
+<p>Itulah pembahasan mengenai mengenal RAID dan beberapa tingkatannya yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai mengenal RAID dan beberapa tingkatannya diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Mengenal RAID dan Beberapa Tingkatannya.&url=http://localhost:4000/mengenal-raid-dan-beberapa-tingkatannya/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/mengenal-raid-dan-beberapa-tingkatannya/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/mengenal-raid-dan-beberapa-tingkatannya/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#RAID" class="tag">&#35; RAID</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
