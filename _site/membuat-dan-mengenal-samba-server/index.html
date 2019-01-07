@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Membuat dan Mengenal Samba Server - Hello, world!</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world!" property="og:site_name">
+  
+    <meta content="Membuat dan Mengenal Samba Server" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/membuat-dan-mengenal-samba-server/" property="og:url">
+  
+  
+    <meta content="2019-01-07T00:00:00+07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/samba2.jpeg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="samba" property="article:tag">
+    
+    <meta content="Linux" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Membuat dan Mengenal Samba Server">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/membuat-dan-mengenal-samba-server/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/samba2.jpeg">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="icon" type="image" href="/assets/img/favicon/foto.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/foto.jpg" alt="MIQDAD"></a>
+      </div>
+      <div class="author-name">MIQDAD</div>
+      <p>I am a beginner developer. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://facebook.com/miqdad.kun.23" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/akunmiq" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/akun-miq-8ba257172" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:miqdad.saja23@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2019 &copy; MIQDAD</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/samba2.jpeg alt="Membuat dan Mengenal Samba Server">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Membuat dan Mengenal Samba Server</h1>
+        <div class="page-date"><span>2019, Jan 07&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Dalam artikel kita akan membahas tentang membuat dan mengenal samba server. Sebelum masuk ke langkah-langkah bagaimana penggunaannya, mari kita ketahui terlebih dahulu apa itu samba server?</p>
+
+<p>Samba server adalah program yang dapat menjembatani kompleksitas berbagai platform system operasi Linux(UNIX) dengan mesin Windows yang dijalankan dalam suatu jaringan komputer. Samba merupakan aplikasi dari UNIX dan Linux, yang dikenal dengan SMB(Service Message Block) protocol. Banyak sistem operasi seperti Windows dan OS/2 yang menggunakan SMB untuk menciptakan jaringan client/server. Protokol Samba memungkinkan server Linux/UNIX untuk berkomunikasi dengan mesin client yang mengunakan OS Windows dalam satu jaringan.</p>
+
+<p>Atau bisa diartikan seperti sebuah software yang bekerja di sistem operasi linux, unix dan windows yang menggunakan protokol network smb (server massage block). Smb adalah sebuah protokol komunikasi data yang juga digunakan oleh Microsoft dan OS/2 untuk menampilkan fungsi jaringan client-server yang menyediakan sharing file dan printer serta tugas-tugas lainnya yang berhubungan.</p>
+
+<p>Setelah mengetahui apa itu samba server, sekarang kita akan masuk ke langkah-langkah untuk membuat samba server.</p>
+
+<h2 id="1-install-samba-server">1. Install Samba Server</h2>
+
+<h3 id="langkah-pertama">Langkah Pertama</h3>
+<p>Langkah pertama adalah kita akan mendownload ‘samba server’ terlebih dahulu dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install samba-client samba-common cifs-utils
+</code></pre></div></div>
+
+<h3 id="langkah-kedua">Langkah Kedua</h3>
+<p>Langkah kedua adalah kita akan edit file ‘smb.conf’ dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/samba/smb.conf
+</code></pre></div></div>
+
+<p>lalu tambahkan tulisan dibawah ini dibagian paling bawah</p>
+
+<p>[global]
+workgroup = WORKGROUP
+server string = Samba Server %v
+netbios name = ubuntu
+security = user
+map to guest = bad user
+dns proxy = no</p>
+
+<p>#============================ Share Definitions ==============================</p>
+
+<p>[Anonymous]
+path = /samba/anonymous
+browsable =yes
+writable = yes
+guest ok = yes
+read only = no
+force user = nobody</p>
+
+<h3 id="langkah-ketiga">Langkah Ketiga</h3>
+<p>Langkah ketiga adalah kita akan membuat folder baru dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p /samba/anonymous
+</code></pre></div></div>
+
+<h3 id="langkah-keempat">Langkah Keempat</h3>
+<p>Langkah keempat adalah kita akan mengganti permission file dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod -R 0775 /samba/anonymous
+
+sudo chown -R nobody:nogroup /samba/anonymous
+</code></pre></div></div>
+
+<h3 id="langkah-kelima">Langkah Kelima</h3>
+<p>Langkah kelima adalah kita akan restart samba server dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service smbd restart
+</code></pre></div></div>
+
+<h3 id="langkah-keenam">Langkah Keenam</h3>
+<p>Langkah keenam adalah kita akan menambahkan group dan user dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo addgroup smbgrp
+
+sudo useradd till -G smbgrp
+
+sudo smbpasswd -a till
+</code></pre></div></div>
+
+<p>Lalu kita akan diminta untuk memasukkan password, bisa diisi sesuai keinginan kita.</p>
+
+<h3 id="langkah-ketujuh">Langkah Ketujuh</h3>
+<p>Langkah ketujuh adalah kita akan membuat folder baru dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir -p /samba/secured
+</code></pre></div></div>
+
+<h3 id="langkah-kedelapan">Langkah Kedelapan</h3>
+<p>Langkah kedelapan adalah kita akan mengganti pemission file dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /samba
+
+sudo chmod -R 0770 secured
+
+sudo chown root:smbgrp secured
+</code></pre></div></div>
+
+<h3 id="langkah-kesembilan">Langkah Kesembilan</h3>
+<p>Langkah kedua adalah kita akan edit file ‘smb.conf’ dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/samba/smb.conf
+</code></pre></div></div>
+
+<p>Tambahkan baris berikut di akhir file:</p>
+
+<p>[secured]
+ path = /samba/secured
+ valid users = @smbgrp
+ guest ok = no
+ writable = yes
+ browsable = yes</p>
+
+<h3 id="langkah-kesepuluh">Langkah Kesepuluh</h3>
+<p>Langkah kesepuluh adalah kita akan restart samba server dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service smbd restart
+</code></pre></div></div>
+
+<h2 id="2-install-samba-client">2. Install Samba Client</h2>
+
+<h3 id="langkah-pertama-1">Langkah Pertama</h3>
+<p>Langkah pertama adalah kita akn install ‘samba client’ dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install samba-client samba-common cifs-utils
+</code></pre></div></div>
+
+<h3 id="lanngkah-kedua">Lanngkah Kedua</h3>
+<p>Langkah kedua adalah kita akan membuat samba client dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo smbclient -I 192.168.100.115 -U user -L share
+</code></pre></div></div>
+
+<ul>
+  <li>192.168.100.115 = ini bisa diisi sesuai dengan IP client kita.</li>
+</ul>
+
+<h3 id="langkah-ketiga-1">Langkah Ketiga</h3>
+<p>Langkah ketiga adalah kita akan membuat smbcredentials dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /mnt
+
+sudo echo "username=user" &gt;.smbcredentials
+
+sudo echo "password=123456" &gt;&gt; .smbcredentials
+</code></pre></div></div>
+
+<ul>
+  <li>username dan password bisa kita isi sesuai dengan keinginan kita.</li>
+</ul>
+
+<h3 id="langkah-keempat-1">Langkah Keempat</h3>
+<p>Langkah keempat adalah kita akan mengganti permission file dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod 600 .smbcredentials
+</code></pre></div></div>
+
+<h3 id="langkah-kelima-1">Langkah Kelima</h3>
+<p>Langkah kelima adalah kita akan menambahkan IP client di /etc/fstab dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/fstab
+</code></pre></div></div>
+
+<p>lalu tambahkan berikut pada bagian bawah lalu save.</p>
+
+<p>//192.168.100.115/Anonymous /mnt/samba cifs credentials=/mnt/.smbcredentials,defaults 0 0</p>
+
+<ul>
+  <li>IP sesuai dengan IP client kita</li>
+</ul>
+
+<h3 id="langkah-keenam-1">Langkah Keenam</h3>
+<p>Langkah keenam adalah kita akan mengemount samba dengan command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a
+</code></pre></div></div>
+
+<p>Jika kita ‘umount -a’ maka kita tidak akan bisa lagi melihat isi file client.</p>
+
+<p>Itulah pembahasan mengenai membuat dan mengenal samba server yang harus anda ketahui sebagai pengguna komputer. Meskipun kalah dengan sistem operasi windows dalam hal kepopulerannya, pengguna linux juga tergolong cukup banyak, terutama bagi yang bekerja dalam bidang jaringan. Semoga artikel mengenai membuat dan mengenal samba server diatas mudah dipahami.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Membuat dan Mengenal Samba Server&url=http://localhost:4000/membuat-dan-mengenal-samba-server/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/membuat-dan-mengenal-samba-server/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/membuat-dan-mengenal-samba-server/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#samba" class="tag">&#35; samba</a>
+          
+            <a href="/tags#Linux" class="tag">&#35; Linux</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
