@@ -178,13 +178,13 @@
 <h2 id="bagian-kedua-tentang-swap-file">Bagian kedua tentang SWAP file</h2>
 
 <h3 id="langkah-pertama-1">Langkah pertama</h3>
-<p>Langkah kelima adalah kita akan membuat Swapfile, dengan command:</p>
+<p>Langkah pertama adalah kita akan membuat Swapfile, dengan command:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd if=/dev/zero of=/root/myswapfile bs=1M count=1024
 </code></pre></div></div>
 
 <h3 id="langkah-kedua-1">Langkah kedua</h3>
-<p>Langkah kenam adalah kita akan kita ganti permission nya, dengan command:</p>
+<p>Langkah kedua adalah kita akan kita ganti permission nya, dengan command:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod 600 /root/myswapfile
 </code></pre></div></div>
@@ -195,7 +195,7 @@
 </code></pre></div></div>
 
 <h3 id="langkah-ketiga-1">Langkah ketiga</h3>
-<p>Langkah ketujuh adalah kita akan mengaktifkan swap, dengan command:</p>
+<p>Langkah ketiga adalah kita akan mengaktifkan swap, dengan command:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swapon /root/myswapfile
 </code></pre></div></div>

@@ -53,12 +53,12 @@ Lalu masukkan '/dev/sdb1 swap swap defaults 0 0' dibaris paling bawah.
 ## Bagian kedua tentang SWAP file
 
 ### Langkah pertama
-Langkah kelima adalah kita akan membuat Swapfile, dengan command:
+Langkah pertama adalah kita akan membuat Swapfile, dengan command:
 
 	dd if=/dev/zero of=/root/myswapfile bs=1M count=1024
 
 ### Langkah kedua
-Langkah kenam adalah kita akan kita ganti permission nya, dengan command:
+Langkah kedua adalah kita akan kita ganti permission nya, dengan command:
 
 	chmod 600 /root/myswapfile
 
@@ -67,7 +67,7 @@ Lalu jalankan command ini untuk menjadikan swap
 	mkswap /root/myswapfile
 
 ### Langkah ketiga
-Langkah ketujuh adalah kita akan mengaktifkan swap, dengan command:
+Langkah ketiga adalah kita akan mengaktifkan swap, dengan command:
 
 	swapon /root/myswapfile
 
